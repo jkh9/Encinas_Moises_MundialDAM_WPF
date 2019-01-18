@@ -66,6 +66,8 @@ namespace capa_presentacion
 
             dgvUsuarios.ItemsSource = dt.AsDataView();
 
+            dgvUsuarios.CanUserDeleteRows = false;
+
             mostrarUsuarios();
         }
 
@@ -189,11 +191,11 @@ namespace capa_presentacion
             cbRolModify.SelectedIndex = usuarioActual.Rol == 1001 ? 1 : 0;
             try
             {
-                pbImageModificar.Source = new BitmapImage(new Uri(usuarioActual.Foto));
+                pbImageModify.Source = new BitmapImage(new Uri(usuarioActual.Foto));
             }
             catch (Exception)
             {
-                pbImageModificar.Source = new BitmapImage(new Uri("imgs/No-image-available.jpg", UriKind.Relative));
+                pbImageModify.Source = new BitmapImage(new Uri("imgs/No-image-available.jpg", UriKind.Relative));
             }
         }
 
@@ -306,7 +308,7 @@ namespace capa_presentacion
                     File.Copy(sourceFile, destFile, true);
                 }
 
-                this.pbImageModificar.Source = new BitmapImage(new Uri(destFile));
+                this.pbImageModify.Source = new BitmapImage(new Uri(destFile));
             }
             else
             {
@@ -365,7 +367,7 @@ namespace capa_presentacion
                 string email = txtEmail.Text;
                 int rol = cbRol.SelectedItem.ToString() ==
                     "Administrador" ? 1000 : 1001;
-                string imagePath = (pbImage.Source as BitmapImage).UriSource.AbsoluteUri;
+                string imagePath = pbImage.Source.ToString();
 
                 if (listaUsuarios.Añadir(usuario, email, nombre, apellidos,
                     rol, imagePath) != 0)
@@ -408,7 +410,7 @@ namespace capa_presentacion
                         txtNombreModify.Clear();
                         txtUsuarioModify.Clear();
                         cbRolModify.SelectedIndex = -1;
-                        pbImageModificar.Source = null;
+                        pbImageModify.Source = new BitmapImage(new Uri("imgs/No-image-available.jpg", UriKind.Relative));
 
                         usuarioActual = null;
                     }
@@ -464,7 +466,7 @@ namespace capa_presentacion
                     string email = txtEmailModify.Text;
                     int rol = cbRolModify.SelectedItem.ToString() ==
                         "Administrador" ? 1000 : 1001;
-                    string imagePath = (pbImageModificar.Source as BitmapImage).UriSource.AbsoluteUri;
+                    string imagePath = (pbImageModify.Source as BitmapImage).UriSource.AbsoluteUri;
 
                     if (listaUsuarios.Modificar(usuario, email, nombre, apellidos,
                         rol, imagePath, usuarioActual) != 0)
