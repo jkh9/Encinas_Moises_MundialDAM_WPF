@@ -1,0 +1,52 @@
+﻿<Window x:Class="capa_presentacion.LogInWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:capa_presentacion"
+        mc:Ignorable="d"
+        Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Closing="WindowClosing">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width = "*" />
+            <ColumnDefinition Width = "2*" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.Background>
+                <ImageBrush ImageSource="imgs/mundial_rusia.jpg"/>
+            </Grid.Background>
+
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.Background>
+                <ImageBrush ImageSource="imgs/Fondo rojo claro-653345.png" Stretch="UniformToFill"/>
+            </Grid.Background>
+
+
+            <TextBlock FontWeight="Black"
+                    FontFamily="Arial" VerticalAlignment="Center" 
+                    Margin="160,46,192,315" FontSize="50">
+            LOGIN
+            </TextBlock >
+
+            <TextBox x:Name="txtUsuario" FontFamily="Georgia" VerticalContentAlignment="Center"
+                     FontSize="20"
+                     Background="Firebrick" Padding="10"
+                     Width="350" Height="50" Margin="0,-100,0,0">
+            </TextBox>
+            <PasswordBox x:Name="txtPass" FontFamily="Georgia" VerticalContentAlignment="Center"
+                     FontSize="20"
+                     Background="Firebrick" Padding="10"
+                     Width="350" Height="50" Margin="0,80,0,0" PasswordChar="*">
+            </PasswordBox>
+            <Button x:Name="btnAcceder" FontFamily="Arial" FontSize="30" 
+                    Foreground="#FFC97676" Background="{x:Null}" 
+                    BorderBrush="Firebrick" BorderThickness="1" 
+                    Margin="0,334,0,32" Width="350" Click="btnAcceder_Click">
+                Acceder
+            </Button>
+
+        </Grid>
+    </Grid>
+</Window>

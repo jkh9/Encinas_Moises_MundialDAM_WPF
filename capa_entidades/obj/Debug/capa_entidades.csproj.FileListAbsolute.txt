@@ -1,0 +1,15 @@
+C:\Users\jkh9L\source\repos\Encinas_Moises_MundialDAM\capa_entidades\bin\Debug\capa_entidades.dll
+C:\Users\jkh9L\source\repos\Encinas_Moises_MundialDAM\capa_entidades\bin\Debug\capa_entidades.pdb
+C:\Users\jkh9L\source\repos\Encinas_Moises_MundialDAM\capa_entidades\obj\Debug\capa_entidades.csproj.CoreCompileInputs.cache
+C:\Users\jkh9L\source\repos\Encinas_Moises_MundialDAM\capa_entidades\obj\Debug\capa_entidades.dll
+C:\Users\jkh9L\source\repos\Encinas_Moises_MundialDAM\capa_entidades\obj\Debug\capa_entidades.pdb
+C:\Users\jkh9L\source\repos\Encinas_Moises_MundialDAM2\capa_entidades\bin\Debug\capa_entidades.dll
+C:\Users\jkh9L\source\repos\Encinas_Moises_MundialDAM2\capa_entidades\bin\Debug\capa_entidades.pdb
+C:\Users\jkh9L\source\repos\Encinas_Moises_MundialDAM2\capa_entidades\obj\Debug\capa_entidades.csproj.CoreCompileInputs.cache
+C:\Users\jkh9L\source\repos\Encinas_Moises_MundialDAM2\capa_entidades\obj\Debug\capa_entidades.dll
+C:\Users\jkh9L\source\repos\Encinas_Moises_MundialDAM2\capa_entidades\obj\Debug\capa_entidades.pdb
+C:\Users\jkh9L\source\repos\Encinas_Moises_MundialDAM_WPF\capa_entidades\bin\Debug\capa_entidades.dll
+C:\Users\jkh9L\source\repos\Encinas_Moises_MundialDAM_WPF\capa_entidades\bin\Debug\capa_entidades.pdb
+C:\Users\jkh9L\source\repos\Encinas_Moises_MundialDAM_WPF\capa_entidades\obj\Debug\capa_entidades.csproj.CoreCompileInputs.cache
+C:\Users\jkh9L\source\repos\Encinas_Moises_MundialDAM_WPF\capa_entidades\obj\Debug\capa_entidades.dll
+C:\Users\jkh9L\source\repos\Encinas_Moises_MundialDAM_WPF\capa_entidades\obj\Debug\capa_entidades.pdb

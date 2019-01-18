@@ -1,0 +1,62 @@
+﻿<Window x:Class="capa_presentacion.PrincipalWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:capa_presentacion"
+        mc:Ignorable="d"
+        Title="FormPrincipal" Height="960" Width="1280" WindowStartupLocation="CenterScreen" 
+        ResizeMode="NoResize" Closing="WindowClosing">
+    <Grid>
+        <Menu Height="40" FontFamily="Segoe UI" FontSize="20" VerticalAlignment="Top" >
+            <MenuItem Header="_Archivo" Margin="10,5">
+                <MenuItem Header="_Salir" Click="btnWindowClosing"/>
+            </MenuItem>
+            <MenuItem x:Name="lblUsuarioAPP" Click="UsuariosAPP_Click" Header="_Usuarios APP" Margin="10,0">
+            </MenuItem>
+            <MenuItem Click="Jugadores_Click" Header="_Jugadores" Margin="10,0">
+            </MenuItem>
+            <MenuItem Click="Equipos_Click" Header="_Equipos" Margin="10,0">
+            </MenuItem>
+            <MenuItem Click="Partidos_Click" Header="_Partidos" Margin="10,0">
+            </MenuItem>
+            <MenuItem Header="_Informes" Margin="10,0">
+                <MenuItem Click="InformePartido_Click" Header="_Un partido"/>
+                <MenuItem Click="InformePartidos_Click" Header="_Clasificación de un mundial"/>
+            </MenuItem>
+            <MenuItem Click="AcercaDe_Click" Header="_Acerca de ..." Margin="10,0">
+            </MenuItem>
+        </Menu>
+        <Grid x:Name="VentanaContenedora" Margin="0,40"/>
+        
+        <StatusBar VerticalAlignment="Bottom" Height="40" FontFamily="Arial" FontSize="15">
+            <StatusBarItem Width="100">
+                <TextBlock x:Name="lblHoraSistema">
+                    00:00:00
+                </TextBlock>
+            </StatusBarItem>
+            <StatusBarItem Width="100">
+                <TextBlock x:Name="lblHorasUso">
+                    00:00:00
+                </TextBlock>
+            </StatusBarItem>
+            <StatusBarItem Width="100">
+                <TextBlock x:Name="lblNombre">
+                    Moisex
+                </TextBlock>
+            </StatusBarItem>
+            <StatusBarItem Width="100" >
+                <TextBlock x:Name="lblTipo">
+                    Administrador
+                </TextBlock>
+            </StatusBarItem>
+            <StatusBarItem HorizontalContentAlignment="Center" >
+                <TextBlock x:Name="lblStatus"
+                           Width="867" Margin="10,0,0,0">
+                </TextBlock>
+            </StatusBarItem>
+            <StatusBarItem>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>
