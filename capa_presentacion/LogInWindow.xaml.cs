@@ -68,7 +68,7 @@ namespace capa_presentacion
                     if (intentos == 3)
                     {
                         MessageBox.Show("Demasiados intentos se cerrara la aplicación");
-                        this.Close();
+                        Application.Current.Shutdown();
                     }
 
                     MessageBox.Show("Nombre o contraseña incorrectos", "ERROR");
@@ -88,7 +88,7 @@ namespace capa_presentacion
 
         private bool checkNewUser()
         {
-            UsuarioType u = negocio.listaUsuarios.GetUsuario(txtPass.Password);
+            UsuarioType u = negocio.listaUsuarios.GetUsuario(txtUsuario.Text);
 
             if (u != null)
             {
