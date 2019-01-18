@@ -8,27 +8,82 @@
         Title="FormPrincipal" Height="960" Width="1280" WindowStartupLocation="CenterScreen" 
         ResizeMode="NoResize" Closing="WindowClosing">
     <Grid>
-        <Menu Height="40" FontFamily="Segoe UI" FontSize="20" VerticalAlignment="Top" >
-            <MenuItem Header="_Archivo" Margin="10,5">
-                <MenuItem Header="_Salir" Click="btnWindowClosing"/>
-            </MenuItem>
-            <MenuItem x:Name="lblUsuarioAPP" Click="UsuariosAPP_Click" Header="_Usuarios APP" Margin="10,0">
-            </MenuItem>
-            <MenuItem Click="Jugadores_Click" Header="_Jugadores" Margin="10,0">
-            </MenuItem>
-            <MenuItem Click="Equipos_Click" Header="_Equipos" Margin="10,0">
-            </MenuItem>
-            <MenuItem Click="Partidos_Click" Header="_Partidos" Margin="10,0">
-            </MenuItem>
-            <MenuItem Header="_Informes" Margin="10,0">
-                <MenuItem Click="InformePartido_Click" Header="_Un partido"/>
-                <MenuItem Click="InformePartidos_Click" Header="_Clasificación de un mundial"/>
-            </MenuItem>
-            <MenuItem Click="AcercaDe_Click" Header="_Acerca de ..." Margin="10,0">
-            </MenuItem>
-        </Menu>
-        <Grid x:Name="VentanaContenedora" Margin="0,40"/>
-        
+        <Grid Height="891" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Menu FontFamily="Gill Sans Ultra Bold" FontSize="25" Grid.Column="0" 
+                  Background="White">
+                <Menu.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </Menu.ItemsPanel>
+                <MenuItem  x:Name="lblUsuarioAPP"  Height="80" Margin="0,20"
+                    Click="UsuariosAPP_Click" 
+                    Header="        _Usuarios APP" >
+                    <MenuItem.Icon>
+                        <Image
+                            Source="imgs/mundial_rusia.jpg" 
+                               Margin="0,-22,-57,-20" Stretch="Fill"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Click="Jugadores_Click" Header="        _Jugadores" 
+                          Height="80" Margin="0,20">
+                    <MenuItem.Icon>
+                        <Image
+                            Source="imgs/Fondo rojo claro-653345.png" 
+                               Margin="0,-22,-57,-20" Stretch="Fill"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Click="Equipos_Click" Header="        _Equipos"
+                          Height="80" Margin="0,20">
+                    <MenuItem.Icon>
+                        <Image
+                            Source="imgs/noticia-mundial-rusia-2018-inauguracion.png" 
+                               Margin="0,-22,-57,-20" Stretch="Fill"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Click="Partidos_Click" Header="        _Partidos"
+                          Height="80" Margin="0,20">
+                    <MenuItem.Icon>
+                        <Image
+                            Source="imgs/mundial-futuro.jpg" 
+                               Margin="0,-22,-57,-20" Stretch="Fill"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="        _Informes"
+                          Height="80" Margin="0,20">
+                    <MenuItem.Icon>
+                        <Image
+                            Source="imgs/mundial_rusia.jpg" 
+                               Margin="0,-22,-57,-20" Stretch="Fill"/>
+                    </MenuItem.Icon>
+                    <MenuItem Click="InformePartido_Click" Header="        _Un partido"
+                               Height="80">
+                        <MenuItem.Icon>
+                            <Image
+                                Source="C:\Users\jkh9L\Desktop\Repositories\Encinas_Moises_MundialDAM_WPF\capa_presentacion\imgs\Fondo rojo claro-653345.png" 
+                                   Margin="0,-22,-57,-20" Stretch="Fill"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Click="InformePartidos_Click" 
+                              Header="        _Clasificación de un mundial"
+                               Height="80">
+                        <MenuItem.Icon>
+                            <Image
+                                Source="C:\Users\jkh9L\Desktop\Repositories\Encinas_Moises_MundialDAM_WPF\capa_presentacion\imgs\Fondo rojo claro-653345.png" 
+                                   Margin="0,-22,-57,-20" Stretch="Fill"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+
+            <Grid x:Name="VentanaContenedora" Grid.Column="1" Background="Red"/>
+        </Grid>
+    
         <StatusBar VerticalAlignment="Bottom" Height="40" FontFamily="Arial" FontSize="15">
             <StatusBarItem Width="100">
                 <TextBlock x:Name="lblHoraSistema">

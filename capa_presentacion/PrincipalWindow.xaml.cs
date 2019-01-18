@@ -63,8 +63,11 @@ namespace capa_presentacion
 
         private void UsuariosAPP_Click(object sender, RoutedEventArgs e)
         {
+        
             UsuariosWindow usuariosWindow = new UsuariosWindow(negocio.listaUsuarios,this.lblStatus, usuario.Usuario);
             VentanaContenedora.Children.Clear();
+            VentanaContenedora.HorizontalAlignment = HorizontalAlignment.Center;
+            VentanaContenedora.VerticalAlignment = VerticalAlignment.Center;
             VentanaContenedora.Children.Add(usuariosWindow);
         }
 
